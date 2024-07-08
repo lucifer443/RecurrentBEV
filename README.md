@@ -12,7 +12,7 @@ This repository is an official implementation of RecurrentBEV. It is built based
 
 ## Main Results
 
-<img src="resources/res50_bench.jpg" title="" alt="" data-align="center">
+<img title="" src="resources/res50_bench.jpg" alt="" data-align="left" width="600">
 
 #### NuScenes Val Set
 
