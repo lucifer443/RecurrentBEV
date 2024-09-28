@@ -16,18 +16,18 @@ This repository is an official implementation of RecurrentBEV. It is built based
 
 #### NuScenes Val Set
 
-| Backbone | Img Size | Pretrain                                                                                                                                                                                  | NDS  | mAP  | Config | Download |
-|:--------:|:--------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----:|:----:|:------:|:--------:|
-| Res50    | 256x704  | [ImageNet](https://download.pytorch.org/models/resnet50-0676ba61.pth)                                                                                                                     | 54.9 | 44.5 | -      | -        |
-| Res101   | 512x1408 | [ImageNet](https://download.pytorch.org/models/resnet50-0676ba61.pth)                                                                                                                     | 59.9 | 50.9 | -      | -        |
-| Res101   | 512x1408 | [NuImages](https://download.openmmlab.com/mmdetection3d/v0.1.0_models/nuimages_semseg/cascade_mask_rcnn_r101_fpn_1x_nuim/cascade_mask_rcnn_r101_fpn_1x_nuim_20201024_134804-45215b1e.pth) | 61.2 | 52.8 | -      | -        |
+| Backbone | Img Size | Pretrain                                                                                                                                                                                  | NDS  | mAP  | Config                                                                       | Download                                                                                    |
+|:--------:|:--------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----:|:----:|:----------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|
+| Res50    | 256x704  | [ImageNet](https://download.pytorch.org/models/resnet50-0676ba61.pth)                                                                                                                     | 54.9 | 44.5 | [config](configs/recurrentbev/recurrentbev_res50_704x256_ep90.py)            | [model](https://drive.google.com/file/d/1khQVn0dAZQAKzXGcYLdAaJXlnOaeZpES/view?usp=sharing) |
+| Res101   | 512x1408 | [ImageNet](https://download.pytorch.org/models/resnet50-0676ba61.pth)                                                                                                                     | 59.9 | 50.9 | [config](configs/recurrentbev/recurrentbev_res101_1408x512_ep90.py)          | -                                                                                           |
+| Res101   | 512x1408 | [NuImages](https://download.openmmlab.com/mmdetection3d/v0.1.0_models/nuimages_semseg/cascade_mask_rcnn_r101_fpn_1x_nuim/cascade_mask_rcnn_r101_fpn_1x_nuim_20201024_134804-45215b1e.pth) | 61.2 | 52.8 | [config](configs/recurrentbev/recurrentbev_res101_1408x512_ep60_nuimages.py) | [model](https://drive.google.com/file/d/1Op8nBCWZD9kj-b_6ebK5X8S6M0JyAbFG/view?usp=sharing) |
 
 #### NuScenes Test Set
 
-| Backbone   | Img Size | Pretrain                                                                             | NDS  | mAP  | Config | Download |
-|:----------:|:--------:|:------------------------------------------------------------------------------------:|:----:|:----:|:------:|:--------:|
-| V2-99      | 640x1600 | [DD3D](https://github.com/exiawsh/storage/releases/download/v1.0/dd3d_det_final.pth) | 65.1 | 57.3 | -      | -        |
-| ConvNeXt-B | 640x1600 | COCO                                                                                 | 65.1 | 57.4 | -      | -        |
+| Backbone   | Img Size | Pretrain                                                                             | NDS  | mAP  | Config                                                                                | Download                                                                                    |
+|:----------:|:--------:|:------------------------------------------------------------------------------------:|:----:|:----:|:-------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|
+| V2-99      | 640x1600 | [DD3D](https://github.com/exiawsh/storage/releases/download/v1.0/dd3d_det_final.pth) | 65.1 | 57.3 | [config](configs/recurrentbev/recurrentbev_v2-99_1600x640_ep60_trainval.py)           | [model](https://drive.google.com/file/d/18TZJ_l928F_2GfXNtWckDnQqoBy8Fg9x/view?usp=sharing) |
+| ConvNeXt-B | 640x1600 | COCO                                                                                 | 65.1 | 57.4 | [config](configs/recurrentbev/recurrentbev_convnext-b_1600x640_ep60_trainval_coco.py) | -                                                                                           |
 
 #### Inference Speed
 
@@ -40,11 +40,21 @@ The below table shows  end-to-end FPS (Frames Per Second) of RecurrentBEV measur
 
 ## Getting Started
 
-TODO
+Please follow our documentation step by step. If you like our work, please recommend it to your colleagues and friends.
+
+1. [Environment Setup.](docs/data_preparation.md)
+
+2. [Data Preparation.](docs/data_preparation.md)
+
+3. [Training and Inference.](docs/training_and_inference.md)
+
+4. [Visualization](docs/visualization.md).
+
+5. [Deployment](docs/deployment.md).
 
 ## Features List
 
-- [ ] RecurretBEV code
+- [x] RecurretBEV code
 - [ ] Visualization
 - [ ] Convert to TRT model
 - [ ] TensorRT inference
