@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This repository is an official implementation of RecurrentBEV. It is built based on MMDetection3D.
+This repository is an official implementation of [RecurrentBEV](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09090.pdf). It is built based on MMDetection3D.
 
 ## Main Results
 
